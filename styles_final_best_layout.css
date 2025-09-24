@@ -48,8 +48,9 @@ header {
   border-radius: 999px;
   cursor: pointer;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  z-index: 1000;   /* make sure it stays on top */
+  z-index: 1000;   /* keep it above everything */
 }
+
 
 
 
