@@ -25,7 +25,7 @@
       min-height: 100vh;     
       display: flex;
       flex-direction: column;
-      justify-content: space-between;  /* header top, content centered */
+      justify-content: space-between;  
       align-items: center;
       padding: 1rem;
     }
@@ -33,19 +33,26 @@
     header {
       text-align: center;
       margin-top: 1rem;
-      color: white;
     }
 
-    .logo-main {
-      font-size: 2rem;
-      font-weight: 900;
-      margin: 0;
+    #senso-logo {
+      display: block;
+      margin: 0 auto;
+      height: 70px;     /* default for mobile */
+      max-width: 90%;   /* prevent overflow */
     }
 
-    .logo-sub {
-      font-size: 1.2rem;
-      margin: 0;
-      font-weight: 400;
+    /* Larger logo for tablets & desktops */
+    @media (min-width: 768px) {
+      #senso-logo {
+        height: 100px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      #senso-logo {
+        height: 130px;
+      }
     }
 
     .center-block {
@@ -92,8 +99,7 @@
 <body>
   <div class="index-container">
     <header>
-      <h1 class="logo-main">SENSO</h1>
-      <h2 class="logo-sub">café</h2>
+      <img id="senso-logo" src="logo.jpg" alt="Senso Café Logo">
     </header>
 
     <main class="center-block">
