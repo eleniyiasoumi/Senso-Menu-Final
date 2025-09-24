@@ -27,31 +27,27 @@
       flex-direction: column;
       justify-content: space-between;  
       align-items: center;
-      padding: 1rem;
+      padding: 0;
     }
 
     header {
+      background-color: black;   /* black bar */
+      width: 100%;
       text-align: center;
-      margin-top: 1rem;
+      padding: 0.5rem 0;
     }
 
     #senso-logo {
       display: block;
       margin: 0 auto;
-      height: 70px;     /* default for mobile */
-      max-width: 90%;   /* prevent overflow */
+      height: 60px;     /* adjust size for mobile */
+      max-width: 90%;
     }
 
-    /* Larger logo for tablets & desktops */
+    /* Larger logo for bigger screens */
     @media (min-width: 768px) {
       #senso-logo {
-        height: 100px;
-      }
-    }
-
-    @media (min-width: 1200px) {
-      #senso-logo {
-        height: 130px;
+        height: 90px;
       }
     }
 
@@ -75,7 +71,6 @@
       flex-direction: column;
       gap: 1rem;
       align-items: center;
-      margin: 0;  
     }
 
     .language-option {
