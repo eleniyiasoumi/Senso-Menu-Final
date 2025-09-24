@@ -36,20 +36,19 @@ header {
 }
 
 #language-toggle {
-  position: absolute;
+  position: fixed;   /* instead of absolute */
   top: 1rem;
   right: 1rem;
   background-color: #fff;
   color: #000;
   border: none;
-  padding: 0.2rem 0.5rem;
-  font-size: 0.6rem;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
   font-weight: 700;
   border-radius: 999px;
   cursor: pointer;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  display: inline-block;       
-  width: auto !important;      
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1000;   /* make sure it stays on top */
 }
 
 
