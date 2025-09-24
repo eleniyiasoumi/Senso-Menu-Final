@@ -22,20 +22,27 @@
       font-family: 'Lato', sans-serif;
     }
 
-    .index-container {
-  min-height: 100vh;              /* full screen */
+   .index-container {
+  min-height: 100vh;     
   display: flex;
   flex-direction: column;
-  justify-content: center;        /* center vertically */
-  align-items: center;            /* center horizontally */
-  padding: 0 1rem;
+  justify-content: space-between;  /* header stays top, main block in center */
+  align-items: center;
+  padding: 1rem;
 }
 
+header {
+  text-align: center;
+  margin-top: 1rem;
+}
 
-    header {
-      text-align: center;
-      padding-top: 1rem;
-    }
+.center-block {
+  flex: 1;                            /* take remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;             /* vertical center */
+  align-items: center;                 /* horizontal center */
+}
 
     #senso-logo {
       height: 80px;
@@ -76,12 +83,13 @@
 </head>
 <body>
   <div class="index-container">
-    <header>
-      <img id="senso-logo" src="logo.jpg" alt="Senso Café Logo">
-    </header>
+  <header>
+    <img id="senso-logo" src="logo.jpg" alt="Senso Café Logo">
+    <h2>SENSO café</h2>
+  </header>
 
+  <main class="center-block">
     <h1 class="handwritten-title">Menu</h1>
-
     <div class="language-buttons">
       <a class="language-option" href="menu.html?lang=en">
         <img src="https://flagcdn.com/w40/gb.png" alt="English"> English
@@ -90,7 +98,8 @@
         <img src="https://flagcdn.com/w40/gr.png" alt="Ελληνικά"> Ελληνικά
       </a>
     </div>
-  </div>
+  </main>
+</div>
   <script>
     function updateVhUnit() {
       let vh = window.innerHeight * 0.01;
